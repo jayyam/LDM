@@ -1,0 +1,26 @@
+{
+  "alumnos": {
+    "alumno": [
+      {
+        "nombre": {
+          "prim": "Juan",
+          "seg": "López"
+        },
+        "curso": {
+          "-codigo": "1",
+          "#text": "DAM"
+        }
+      },
+      {
+        "nombre": {
+          "prim": "Pepe",
+          "seg": "Gómez"
+        },
+        "curso": {
+          "-codigo": "2",
+          "#text": "DAW"
+        }
+      }
+    ]
+  }
+}

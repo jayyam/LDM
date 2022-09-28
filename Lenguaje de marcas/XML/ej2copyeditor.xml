@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+  <alumno>
+    <nombre>
+      <prim>Juan</prim>
+      <seg>López</seg>
+    </nombre>
+    <curso codigo="1">DAM</curso>
+  </alumno>
+  <alumno>
+    <nombre>
+      <prim>Pepe</prim>
+      <seg>Gómez</seg>
+    </nombre>
+    <curso codigo="2">DAW</curso>
+  </alumno>
+</alumnos>

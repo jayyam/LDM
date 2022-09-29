@@ -1,0 +1,17 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT noticia (lugar,fecha,desc)>
+<!ATTLIST noticia
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT lugar (#PCDATA)>
+<!ATTLIST lugar
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT fecha (#PCDATA)>
+<!ATTLIST fecha
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT desc (#PCDATA)>
+<!ATTLIST desc
+    xmlns CDATA #FIXED ''>

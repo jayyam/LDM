@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="direccion">
+            <ref name="nombre"/>
+            <element name="calle">
+                <text/>
+            </element>
+            <element name="ciudad">
+                <attribute name="estado">
+                    <data type="NCName"/>
+                </attribute>
+                <data type="NCName"/>
+            </element>
+            <element name="codigo-postal">
+                <data type="integer"/>
+            </element>
+        </element>
+    </start>
+    <define name="nombre">
+        <element name="nombre">
+            <oneOrMore>
+                <choice>
+                    <text/>
+                    <ref name="nombre"/>
+                    <element name="apellidos">
+                        <data type="NCName"/>
+                    </element>
+                    <element name="titulo">
+                        <data type="NCName"/>
+                    </element>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+</grammar>

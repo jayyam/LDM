@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mensajes>
+    <mensaje>
+        <remite>
+            <nombre>Alfredo Reino</nombre>
+            <email>alf@ibium.com</email>
+        </remite>
+        <destinatario>
+            <nombre>Bill Clinton</nombre>
+            <email>president@whitehouse.gov</email>
+        </destinatario>
+        <asunto>Hola Bill</asunto>
+        <texto>
+            <parrafo id="1">Hola que tal. V &lt; 6km/h </parrafo> <!-- Caracter especial menor que "<" (less than) -->
+            <parrafo id="2" prioridad ="informacion" pag ="13">Hace mucho tiempo que no escribes. A ver si llamas  quedamos pronto</parrafo>
+            <parrafo id="3">
+                <linea>Un saludo</linea>
+                <estilo>Romanticismo</estilo>
+            </parrafo>
+        </texto>
+    </mensaje>
+</mensajes>

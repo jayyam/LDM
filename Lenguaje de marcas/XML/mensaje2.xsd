@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="mensajes" type="mensajesType"/>
+  <xs:complexType name="remiteType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nombre"/>
+      <xs:element type="xs:string" name="email"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="destinatarioType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nombre"/>
+      <xs:element type="xs:string" name="email"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="parrafoType" mixed="true">
+    <xs:sequence>
+      <xs:element type="xs:string" name="linea" minOccurs="0"/>
+      <xs:element type="xs:string" name="estilo" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="prioridad" use="optional"/>
+    <xs:attribute type="xs:string" name="pag" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="textoType">
+    <xs:sequence>
+      <xs:element type="parrafoType" name="parrafo" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation> Caracter especial menor que "&lt;" (less than) </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mensajeType">
+    <xs:sequence>
+      <xs:element type="remiteType" name="remite"/>
+      <xs:element type="destinatarioType" name="destinatario"/>
+      <xs:element type="xs:string" name="asunto"/>
+      <xs:element type="textoType" name="texto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mensajesType">
+    <xs:sequence>
+      <xs:element type="mensajeType" name="mensaje"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

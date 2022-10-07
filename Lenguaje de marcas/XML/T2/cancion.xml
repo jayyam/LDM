@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CD [
+        <!ELEMENT CD (songs|fecha)*>
+        <!ATTLIST CD
+                title CDATA #REQUIRED>
+        <!ELEMENT songs (song)*>
+        <!ELEMENT song (title|composers|producers|publisher|artists)*>
+        <!ATTLIST song
+                length CDATA #REQUIRED
+                anio CDATA #REQUIRED>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT composers (composer)*>
+        <!ELEMENT composer (nombre|apellidos)*>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT producers (producer)*>
+        <!ELEMENT producer (nombre|apellidos)*>
+        <!ELEMENT publisher (#PCDATA)>
+        <!ELEMENT artists (artist)*>
+        <!ELEMENT artist (#PCDATA)>
+        <!ELEMENT fecha (#PCDATA)>
+        <!ATTLIST fecha
+                dia CDATA #REQUIRED
+                mes CDATA #REQUIRED
+                anio CDATA #REQUIRED>
+        ]>
+<CD title="">
+    <songs>
+        <song length="6:20" anio="1978">
+            <title>Hot Cop</title>
+            <composers>
+                <composer>
+                    <nombre>Henry</nombre>
+                    <apellidos>Beolo</apellidos>
+                </composer>
+            </composers>
+            <producers>
+                <producer>
+                    <nombre>Jaques</nombre>
+                    <apellidos>Morali</apellidos>
+                </producer>
+            </producers>
+            <publisher>Polygram</publisher>
+            <artists>
+                <artist>Village People</artist>
+            </artists>
+        </song>
+    </songs>
+    <fecha dia="1" mes="1" anio="1978"></fecha>
+</CD>

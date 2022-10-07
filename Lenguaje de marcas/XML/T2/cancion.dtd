@@ -1,0 +1,63 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT CD (songs,fecha)>
+<!ATTLIST CD
+    xmlns CDATA #FIXED ''
+    title CDATA #REQUIRED>
+
+<!ELEMENT songs (song)>
+<!ATTLIST songs
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT fecha EMPTY>
+<!ATTLIST fecha
+    xmlns CDATA #FIXED ''
+    anio  #REQUIRED
+    dia  #REQUIRED
+    mes  #REQUIRED>
+
+<!ELEMENT song (title,composers,producers,publisher,artists)>
+<!ATTLIST song
+    xmlns CDATA #FIXED ''
+    anio  #REQUIRED
+    length  #REQUIRED>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT composers (composer)>
+<!ATTLIST composers
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT producers (producer)>
+<!ATTLIST producers
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT publisher (#PCDATA)>
+<!ATTLIST publisher
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT artists (artist)>
+<!ATTLIST artists
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT composer (nombre,apellidos)>
+<!ATTLIST composer
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT producer (nombre,apellidos)>
+<!ATTLIST producer
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT artist (#PCDATA)>
+<!ATTLIST artist
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST nombre
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT apellidos (#PCDATA)>
+<!ATTLIST apellidos
+    xmlns CDATA #FIXED ''>

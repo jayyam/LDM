@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CD" type="CDType"/>
+  <xs:complexType name="composerType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nombre"/>
+      <xs:element type="xs:string" name="apellidos"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="composersType">
+    <xs:sequence>
+      <xs:element type="composerType" name="composer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producerType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nombre"/>
+      <xs:element type="xs:string" name="apellidos"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producersType">
+    <xs:sequence>
+      <xs:element type="producerType" name="producer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="artistsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="artist"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="songType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="title"/>
+      <xs:element type="composersType" name="composers"/>
+      <xs:element type="producersType" name="producers"/>
+      <xs:element type="xs:string" name="publisher"/>
+      <xs:element type="artistsType" name="artists"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="length"/>
+    <xs:attribute type="xs:string" name="anio"/>
+  </xs:complexType>
+  <xs:complexType name="songsType">
+    <xs:sequence>
+      <xs:element type="songType" name="song"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fechaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="dia"/>
+        <xs:attribute type="xs:string" name="mes"/>
+        <xs:attribute type="xs:string" name="anio"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="CDType">
+    <xs:sequence>
+      <xs:element type="songsType" name="songs"/>
+      <xs:element type="fechaType" name="fecha"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="title"/>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,31 @@
+{
+  "@title": "",
+  "songs": {
+    "song": {
+      "@length": "6:20",
+      "@anio": "1978",
+      "title": "Hot Cop",
+      "composers": {
+        "composer": {
+          "nombre": "Henry",
+          "apellidos": "Beolo"
+        }
+      },
+      "producers": {
+        "producer": {
+          "nombre": "Jaques",
+          "apellidos": "Morali"
+        }
+      },
+      "publisher": "Polygram",
+      "artists": {
+        "artist": "Village People"
+      }
+    }
+  },
+  "fecha": {
+    "@dia": "1",
+    "@mes": "1",
+    "@anio": "1978"
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Formularios dinámicos</title>
+        <link rel="stylesheet" href="estilo.css">
+        <script>
+        function mostrarEval() {
+                var elementoSel = document.getElementById("tipoMateria");
+                if (elementoSel === null) {
+                        var posicion = document.getElementById("elegirMateria");
+                        var sel = document.createElement("SELECT");
+                        sel.setAttribute("id","tipoMateria");
+                        sel.setAttribute("name","tipoMateria");
+                        
+                        var opc1 = document.createElement("OPTION");
+                        opc1.setAttribute("value", "Linux");
+                        opc1.setAttribute("selected", "selected");
+                        var cont1 = document.createTextNode("Linux");
+                        opc1.appendChild(cont1);
+                        
+                        var opc2 = document.createElement("OPTION");
+                        opc2.setAttribute("value", "XML");
+                        var cont2 = document.createTextNode("XML");
+                        opc2.appendChild(cont2);
+                        
+                        sel.appendChild(opc1);
+                        sel.appendChild(opc2);
+                        
+                        posicion.appendChild(sel);
+                }
+                else {
+                        elementoSel.parentNode.removeChild(elementoSel);
+                }
+        }
+        
+        function Acabar() {
+                var elementoCheck = document.getElementById("eval");
+                if (elementoCheck.checked === true) {
+                        var tipoMateria = document.getElementById("tipoMateria");
+                        var indiceSeleccionado = tipoMateria.selectedIndex;
+                        var opcionSeleccionada = tipoMateria.options[indiceSeleccionado];
+                        var textoSeleccionado = opcionSeleccionada.text;
+                        
+                        if (textoSeleccionado === "Linux") {
+                                window.open("FormularioCompletoLinux.html","_self");
+                        } else if (textoSeleccionado === "XML") {
+                                window.open("FormularioCompletoXML.html","_self");
+                        }
+                }
+                else {
+                        alert("Su solicitud ha sido enviada correctamente");
+                }
+        }
+        
+        </script>
+  </head>
+  <body>
+  <h1>Formulario Dinámico</h1>
+  <br />
+  <form>
+  <fieldset>
+  Nombre: <input type="text" id="nombre" />
+  <br />
+  Apellidos: <input type="text" id="apellidos" />
+  <br />
+  Ciclo:
+  <select  name="ciclo">
+                <option value="DAM" selected="selected">DAM</option>
+                <option value="DAW">DAW</option>
+                <option value="ASIR">ASIR</option>
+  </select>
+  </fieldset>
+  <fieldset>
+  ¿Quiere evaluar al final sus conocimientos informáticos?
+  <input id ="eval" name="eval" onclick="mostrarEval()" type="checkbox" value="eval" />
+  <br />
+  <div id="elegirMateria">
+  </div>
+  <br />
+  <input type="button" value="Aceptar" onclick="Acabar()" />
+  </fieldset>
+  </form>
+  </body>
+</html>

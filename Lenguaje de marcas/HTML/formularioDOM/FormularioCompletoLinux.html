@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Examen Linux</title>
+        <link rel="stylesheet" href="estilo.css">
+        <script>
+ function contar() {
+        var calif;
+        var checkboxes = document.getElementById("examen").checkbox; //Array que contiene los checkbox
+        var cont = 0; //Variable que lleva la cuenta de los checkbox pulsados
+        for (var x=0; x < checkboxes.length; x++) {
+                if (checkboxes[x].checked) {
+                        cont = cont + 1;
+                }
+        }
+ 
+        if(cont===3){
+                calif="¡Enhorabuena! Usted domina perfectamente el lenguaje Android";           
+        } else if(cont===2){
+                calif="Sus conocimientos son aceptables pero debe mejorar";             
+        } else if(cont===1){
+                calif="Sus conocimientos son insuficientes. Debe aprender mucho más";           
+        } else {
+                calif="Usted no conoce nada del lenguaje Android. Debe comenzar a aprender ya";
+        }
+        alert (calif);
+ }
+</script>
+</head>
+<body>
+<h1>Examen Linux</h1>
+<br />
+<form id="examen">
+<input type="checkbox" name="checkbox" id="chk1" /> 1. Domina el control de drivers en Linux
+<br />
+<input type="checkbox" name="checkbox" id="chk2" /> 2. Domina la creación de interfaz de usuario en Linux
+<br />
+<input type="checkbox" name="checkbox" id="chk3" /> 3. Domina la comunicación entre procesos en Linux
+<br />
+<input type="button" value="Comprobar" onclick="contar()" />
+</form>
+</body>
+</html>

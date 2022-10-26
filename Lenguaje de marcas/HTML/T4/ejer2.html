@@ -3,8 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Tim Berners Lee</title>
+    <link rel="stylesheet" href="reloj2.css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #dddddd;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
+<div id="liveclock" class="outer_face">
+    <div class="marker oneseven"></div>
+    <div class="marker twoeight"></div>
+    <div class="marker fourten"></div>
+    <div class="marker fiveeleven"></div>
+
+    <div class="inner_face">
+        <div class="hand hour"></div>
+        <div class="hand minute"></div>
+        <div class="hand second"></div>
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="reloj.js"></script>
    <h1>Tim Berners-Lee</h1>
 
    <p>Sir Timothy "Tim" John Berners-Lee (Londres, Reino Unido, 8 de junio de 1955) es un científico de la computación británico, conocido por ser el padre de la Web. Estableció la primera comunicación entre un cliente y un servidor usando el protocolo <strong>HTTP</strong> en noviembre de 1989. En octubre de 1994 fundó el <em>Consorcio de la World Wide Web</em> (<strong>W3C</strong>) con sede en el <strong>MIT</strong>, para supervisar y estandarizar el desarrollo de las tecnologías sobre las que se fundamenta la Web y que permiten el funcionamiento de Internet.

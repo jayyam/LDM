@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diccionarios>
+    <idiomas>
+        <idioma id="es">español</idioma>
+        <idioma id="fr">francés</idioma>
+        <idioma id="en">inglés</idioma>
+    </idiomas>
+    <palabras>
+        <palabra id="es"> perro />perro
+        <palabra id="en"> perro />dog
+        <palabra id="fr"> perro />chien
+    <\palabras>
+        autor: Acme & Co.
+
+    </diccionarios>

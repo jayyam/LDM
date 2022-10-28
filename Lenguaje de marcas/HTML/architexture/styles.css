@@ -13,9 +13,9 @@ display: block;
 
 body {
 line-height: 1;
-background: #1F4677;
+background: #8a1313;
 font-family: Verdana, Arial, Helvetica, sans-serif;
-color: #666;
+color: #080808;
 font-size: 14px;
 line-height: 18px;
 }
@@ -27,15 +27,15 @@ width: 940px;
 margin: 0 auto;
 margin-top: 5px;
 margin-bottom: 5px;
--webkit-box-shadow: 3px 3px 7px #777;
--moz-box-shadow: 3px 3px 7px #777;
+-webkit-box-shadow: 3px 3px 7px #080808;
+-moz-box-shadow: 3px 3px 7px #080808;
 }
 
 nav {
 width: 940px;
 height: 69px;
 margin: 0 auto;
-background: #1F4677 url(images/blueprintpaper.png) repeat-x;
+background: #8a1313 url(images/texturelhu.png) repeat-x;
 }
 
 header {
@@ -43,14 +43,14 @@ position:relative;
 width: 940px;
 height: 200px;
 margin: 0 auto;
-background: #D2E1F6;
+background: #105100;
 }
 
 #main {
 width: 940px;
 margin: 0 auto;
 padding: 10px 0 10px 0;
-background: #fff;
+background: #105100;
 overflow: hidden;
 }
 
@@ -64,8 +64,8 @@ margin-right: 30px;
 float: left;
 padding-left: 20px;
 width: 270px;
-background: #fff;
-border-right: 4px #1F4677 solid;
+background: #105100;
+border-right: 4px #8a1313 solid;
 }
 
 footer {
@@ -79,16 +79,16 @@ clear: both;
 h1,h2,h3,h4,h5,h6 {
 font-weight: bold;
 clear: both;
-color: #333;
+color: #080808;
 }
 
 a:link, a:visited {
-color:#1F4677;
+color: #8a1313;
 text-decoration: none;
 }
 
 a:hover, a:active {
-color: #333;
+color: #080808;
 text-decoration: underline;
 }
 
@@ -125,7 +125,7 @@ float: left;
 margin-right: 5px;
 padding: 0px 15px;
 text-decoration: none;
-color: #1F4677;
+color: #8a1313;
 }
 
 nav .menu a:hover {
@@ -153,7 +153,7 @@ padding-top: 20px;
 
 header h1 a:link, header h1 a:visited {
 text-decoration: none;
-color: #333;
+color: #080808;
 }
 
 header h1 a:hover { 
@@ -165,14 +165,14 @@ padding: 80px 0 0 30px;
 width: 500px;
 font-style: italic;
 font-size: 14px;
-color: #333;
+color: #080808;
 }
 
 /** ARTICLES **/
 article img {
 border: none;
--webkit-box-shadow: 3px 3px 7px #777;
--moz-box-shadow: 3px 3px 7px #777;
+-webkit-box-shadow: 3px 3px 7px #080808;
+-moz-box-shadow: 3px 3px 7px #080808;
 }
 
 #content p, ul, ol, hr {
@@ -184,7 +184,7 @@ margin-bottom: 0;
 }
 
 #content h1, h2, h3, h4, h5, h6 {
-color: #333;
+color: #080808;
 margin: 0 0 20px 0;
 line-height: 1.5em;
 }
@@ -222,14 +222,14 @@ font-size: 18px;
 
 aside ul {
 list-style: inside;
-color: #333;
+color: #080808;
 margin-bottom: 20px;
 margin-top: -15px;
 }
 
 #footer-area {
-background: #D2E1F6;
-color: #333;
+background: #105100;
+color: #080808;
 font-size: 90%;
 padding: 18px 0;
 overflow: hidden;
@@ -243,7 +243,7 @@ width: 190px;
 }
 
 footer aside h4 {
-color: #333;
+color: #080808;
 font-size: 16px;
 line-height: 1.5em;
 }

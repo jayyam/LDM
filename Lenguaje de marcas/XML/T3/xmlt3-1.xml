@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <titulo>diccionario para corrector ortográfico</titulo>
+            <palabras>
+            <palabra> correcta idioma=español hincapié</palabra>
+<palabra#incorrecta idioma=español>incapié
+</palabras>
+<signo="?" />interrogación
+<autor>Barto</ autor>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="recetario" type="recetarioType"/>
+  <xs:complexType name="recetaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nombre"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+    <xs:attribute type="xs:string" name="tipo"/>
+  </xs:complexType>
+  <xs:complexType name="tiempoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="unidad"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="caloriasType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="unidad"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="infogeneralType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="foto"/>
+      <xs:element type="xs:string" name="comensales"/>
+      <xs:element type="tiempoType" name="tiempo"/>
+      <xs:element type="xs:string" name="dificultad"/>
+      <xs:element type="caloriasType" name="calorias"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ingredienteType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="cantidad" use="optional"/>
+        <xs:attribute type="xs:string" name="unidad" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ingredientesType">
+    <xs:sequence>
+      <xs:element type="ingredienteType" name="ingrediente" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pasoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="numero" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="preparacionType">
+    <xs:sequence>
+      <xs:element type="pasoType" name="paso" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recetarioType">
+    <xs:sequence>
+      <xs:element type="recetaType" name="receta"/>
+      <xs:element type="infogeneralType" name="infogeneral"/>
+      <xs:element type="ingredientesType" name="ingredientes"/>
+      <xs:element type="preparacionType" name="preparacion"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

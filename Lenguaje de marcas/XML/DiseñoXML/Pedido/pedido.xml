@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos>
+    <pedido>
+        <destinatario>
+            <Nombre></Nombre>
+            <Apellido></Apellido>
+            <Domicilio></Domicilio>
+        </destinatario>
+        <articulo>
+            <tipo></tipo>
+            <cantidad></cantidad>
+        </articulo>
+        <fechaEntrega></fechaEntrega>
+    </pedido>
+</pedidos>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Juan Delgado Martínez. El pedido se compone de una bicicleta A2023. A entregar en la calle Barco 4, tercer piso, letra A, el día 19-5-2000.-->
+
+<!--destinatario del pedido, artículo pedido, dirección de entrega, fecha de entrega-->
+
+
+
+

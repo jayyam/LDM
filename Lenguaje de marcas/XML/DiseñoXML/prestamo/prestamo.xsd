@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Biblioteca" type="BibliotecaType"/>
+  <xs:complexType name="DatosLectorType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Nombre"/>
+      <xs:element type="xs:string" name="Apellido"/>
+      <xs:element type="xs:string" name="Domicilio"/>
+      <xs:element type="xs:string" name="Telefono"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DatosLibroType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Autor"/>
+      <xs:element type="xs:string" name="Titulo"/>
+      <xs:element type="xs:string" name="Clasificacion"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FichadePrestamoType">
+    <xs:sequence>
+      <xs:element type="DatosLectorType" name="DatosLector"/>
+      <xs:element type="DatosLibroType" name="DatosLibro"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BibliotecaType">
+    <xs:sequence>
+      <xs:element type="FichadePrestamoType" name="FichadePrestamo"/>
+      <xs:element type="xs:string" name="FechaSalida"/>
+      <xs:element type="xs:string" name="Entrega"/>
+      <xs:element type="xs:string" name="FirmaRecibido"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

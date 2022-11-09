@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE recetario [
+        <!ELEMENT recetario (receta|infogeneral|ingredientes|preparacion)*>
+        <!ELEMENT receta (nombre)*>
+        <!ATTLIST receta
+                id CDATA #REQUIRED
+                tipo CDATA #REQUIRED>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT infogeneral (foto|comensales|tiempo|dificultad|calorias)*>
+        <!ELEMENT foto (#PCDATA)>
+        <!ELEMENT comensales (#PCDATA)>
+        <!ELEMENT tiempo (#PCDATA)>
+        <!ATTLIST tiempo
+                unidad CDATA #REQUIRED>
+        <!ELEMENT dificultad (#PCDATA)>
+        <!ELEMENT calorias (#PCDATA)>
+        <!ATTLIST calorias
+                unidad CDATA #REQUIRED>
+        <!ELEMENT ingredientes (ingrediente)*>
+        <!ELEMENT ingrediente (#PCDATA)>
+        <!ATTLIST ingrediente
+                cantidad CDATA #IMPLIED
+                unidad CDATA #IMPLIED>
+        <!ELEMENT preparacion (paso)*>
+        <!ELEMENT paso (#PCDATA)>
+        <!ATTLIST paso
+                numero CDATA #REQUIRED>
+        ]>
+<recetario>
+    <receta id="besugo" tipo="recetas de pescado">
+        <nombre>Besugo al horno</nombre>
+    </receta>
+    <infogeneral>
+        <foto>https://unareceta.com/wp-content/uploads/2017/10/besugo-al-horno-con-patatas-cebolla-y-tomate.jpg</foto>
+        <comensales>4</comensales>
+        <tiempo unidad="m">45</tiempo>
+        <dificultad>Muy facil</dificultad>
+        <calorias unidad="kcal">500</calorias>
+    </infogeneral>
+    <ingredientes>
+        <ingrediente cantidad ="1">Besugo</ingrediente>
+        <ingrediente cantidad ="1">Limon</ingrediente>
+        <ingrediente cantidad ="1">cuchara sopera</ingrediente>
+        <ingrediente cantidad ="1" unidad="cucharadita sopera">Pan Rallado</ingrediente>
+        <ingrediente cantidad ="2" unidad="dientes">Ajo</ingrediente>
+        <ingrediente cantidad ="1/2">Vino Blanco</ingrediente>
+        <ingrediente>Aceite</ingrediente>
+        <ingrediente>Perejil</ingrediente>
+        <ingrediente>Sal</ingrediente>
+    </ingredientes>
+    <preparacion>
+        <paso numero="1">Limpiar el pescado</paso>
+        <paso numero="2">Ponerlo en fuego</paso>
+        <paso numero="3">Pelar y picar los...</paso>
+        <paso numero="4">Cubrir el pescado</paso>
+        <paso numero="5">Meter en el horno</paso>
+    </preparacion>
+</recetario>

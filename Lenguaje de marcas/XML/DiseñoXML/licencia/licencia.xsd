@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="licencias" type="licenciasType"/>
+  <xs:complexType name="numIdentidadType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="tipo" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="datosType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="clase"/>
+      <xs:element type="xs:string" name="fechaCaduca"/>
+      <xs:element type="numIdentidadType" name="numIdentidad" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="xs:string" name="nombre"/>
+      <xs:element type="xs:string" name="apellidos"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LicenciaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="numero"/>
+      <xs:element type="datosType" name="datos"/>
+      <xs:element type="xs:string" name="nota"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="tipo"/>
+  </xs:complexType>
+  <xs:complexType name="licenciasType">
+    <xs:sequence>
+      <xs:element type="LicenciaType" name="Licencia"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

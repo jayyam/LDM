@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Biblioteca" type="BibliotecaType"/>
-  <xs:complexType name="DatosLectorType">
+  <xs:element name="biblioteca" type="bibliotecaType"/>
+  <xs:complexType name="datos_lectorType">
     <xs:sequence>
-      <xs:element type="xs:string" name="Nombre"/>
-      <xs:element type="xs:string" name="Apellido"/>
-      <xs:element type="xs:string" name="Domicilio"/>
-      <xs:element type="xs:string" name="Telefono"/>
+      <xs:element type="xs:string" name="nombre"/>
+      <xs:element type="xs:string" name="apellido"/>
+      <xs:element type="xs:string" name="domicilio"/>
+      <xs:element type="xs:string" name="telefono"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="DatosLibroType">
+  <xs:complexType name="datos_libroType">
     <xs:sequence>
-      <xs:element type="xs:string" name="Autor"/>
-      <xs:element type="xs:string" name="Titulo"/>
-      <xs:element type="xs:string" name="Clasificacion"/>
+      <xs:element type="xs:string" name="autor"/>
+      <xs:element type="xs:string" name="titulo"/>
+      <xs:element type="xs:string" name="calificacion"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="FichadePrestamoType">
+  <xs:complexType name="fichadePrestamoType">
     <xs:sequence>
-      <xs:element type="DatosLectorType" name="DatosLector"/>
-      <xs:element type="DatosLibroType" name="DatosLibro"/>
+      <xs:element type="datos_lectorType" name="datos_lector"/>
+      <xs:element type="datos_libroType" name="datos_libro"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="BibliotecaType">
+  <xs:complexType name="bibliotecaType">
     <xs:sequence>
-      <xs:element type="FichadePrestamoType" name="FichadePrestamo"/>
-      <xs:element type="xs:string" name="FechaSalida"/>
-      <xs:element type="xs:string" name="Entrega"/>
-      <xs:element type="xs:string" name="FirmaRecibido"/>
+      <xs:element type="fichadePrestamoType" name="fichadePrestamo"/>
+      <xs:element type="xs:string" name="fecha_salida"/>
+      <xs:element type="xs:string" name="fecha_devolucion"/>
+      <xs:element type="xs:string" name="firma_recibido"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

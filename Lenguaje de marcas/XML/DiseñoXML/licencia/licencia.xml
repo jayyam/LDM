@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Licencia>
-
-</Licencia>
-
+<!DOCTYPE licencias [
+        <!ELEMENT licencias (Licencia)*>
+        <!ELEMENT Licencia (numero|datos|nota)*>
+        <!ATTLIST Licencia
+                tipo CDATA #REQUIRED>
+        <!ELEMENT numero (#PCDATA)>
+        <!ELEMENT datos (clase|fechaCaduca|numIdentidad|nombre|apellidos)*>
+        <!ELEMENT clase (#PCDATA)>
+        <!ELEMENT fechaCaduca (#PCDATA)>
+        <!ELEMENT numIdentidad (#PCDATA)>
+        <!ATTLIST numIdentidad
+                tipo CDATA #REQUIRED>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellidos (#PCDATA)>
+        <!ELEMENT nota (#PCDATA)>
+        ]>
+<licencias>
+    <Licencia tipo="Pesca maritima de recreo">
+        <numero>123456</numero>
+        <datos>
+            <clase>F</clase>
+            <fechaCaduca>25-12-2026</fechaCaduca>
+            <numIdentidad tipo="DNI">48715284C</numIdentidad>
+            <numIdentidad tipo="CIF"></numIdentidad>
+            <numIdentidad tipo="Pasaporte"></numIdentidad>
+            <nombre>Juan</nombre>
+            <apellidos>delgado Martinez</apellidos>
+        </datos>
+        <nota>La identidad del titular...</nota>
+    </Licencia>
+</licencias>

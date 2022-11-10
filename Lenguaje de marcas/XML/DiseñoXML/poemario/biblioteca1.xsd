@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="buscadorPoema" type="buscadorPoemaType"/>
+  <xs:complexType name="datos_poemaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="tituloPoema"/>
+      <xs:element type="xs:string" name="estiloPoema"/>
+      <xs:element type="xs:string" name="temáticaPoema"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="datos_autorType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nombreAutor"/>
+      <xs:element type="xs:string" name="añoNacimiento"/>
+      <xs:element type="xs:string" name="añoDefuncion"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estrofaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="numero"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="estrofasPoemaType">
+    <xs:sequence>
+      <xs:element type="estrofaType" name="estrofa"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lineaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="numero" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="lineasPoemaType">
+    <xs:sequence>
+      <xs:element type="lineaType" name="linea" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="texto_poemaType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="movimientoLiterario"/>
+      <xs:element type="estrofasPoemaType" name="estrofasPoema"/>
+      <xs:element type="lineasPoemaType" name="lineasPoema"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscadorPoemaType">
+    <xs:sequence>
+      <xs:element type="datos_poemaType" name="datos_poema"/>
+      <xs:element type="datos_autorType" name="datos_autor"/>
+      <xs:element type="texto_poemaType" name="texto_poema"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

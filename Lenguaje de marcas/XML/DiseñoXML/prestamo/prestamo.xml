@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE Biblioteca [
-        <!ELEMENT Biblioteca (FichadePrestamo|FechaSalida|Entrega|FirmaRecibido)*>
-        <!ELEMENT FichadePrestamo (DatosLector|DatosLibro)*>
-        <!ELEMENT DatosLector (Nombre|Apellido|Domicilio|Telefono)*>
-        <!ELEMENT Nombre (#PCDATA)>
-        <!ELEMENT Apellido (#PCDATA)>
-        <!ELEMENT Domicilio (#PCDATA)>
-        <!ELEMENT Telefono (#PCDATA)>
-        <!ELEMENT DatosLibro (Autor|Titulo|Clasificacion)*>
-        <!ELEMENT Autor (#PCDATA)>
-        <!ELEMENT Titulo (#PCDATA)>
-        <!ELEMENT Clasificacion (#PCDATA)>
-        <!ELEMENT FechaSalida (#PCDATA)>
-        <!ELEMENT Entrega (#PCDATA)>
-        <!ELEMENT FirmaRecibido (#PCDATA)>
+<!DOCTYPE biblioteca [
+        <!ELEMENT biblioteca (fichadePrestamo|fecha_salida|fecha_devolucion|firma_recibido)*>
+        <!ELEMENT fichadePrestamo (datos_lector|datos_libro)*>
+        <!ELEMENT datos_lector (nombre|apellido|domicilio|telefono)*>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellido (#PCDATA)>
+        <!ELEMENT domicilio (#PCDATA)>
+        <!ELEMENT telefono (#PCDATA)>
+        <!ELEMENT datos_libro (autor|titulo|calificacion)*>
+        <!ELEMENT autor (#PCDATA)>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT calificacion (#PCDATA)>
+        <!ELEMENT fecha_salida (#PCDATA)>
+        <!ELEMENT fecha_devolucion (#PCDATA)>
+        <!ELEMENT firma_recibido (#PCDATA)>
         ]>
-<Biblioteca>
-    <FichadePrestamo>
-        <DatosLector>
-                <Nombre></Nombre>
-                <Apellido></Apellido>
-                <Domicilio></Domicilio>
-                <Telefono></Telefono>
-        </DatosLector>
-        <DatosLibro>
-            <Autor></Autor>
-            <Titulo></Titulo>
-            <Clasificacion></Clasificacion>
-        </DatosLibro>
-    </FichadePrestamo>
-    <FechaSalida>
-    </FechaSalida>
-    <Entrega>
-    </Entrega>
-    <FirmaRecibido>
-    </FirmaRecibido>
-</Biblioteca>
+<biblioteca>
+    <fichadePrestamo>
+        <datos_lector>
+                <nombre>Juan</nombre>
+                <apellido>Delgado Martinez</apellido>
+                <domicilio>calle Barco 4, tercer piso, letra A</domicilio>
+                <telefono>968124578</telefono>
+        </datos_lector>
+        <datos_libro>
+            <autor>H.P. Lovecraft</autor>
+            <titulo>Mitos</titulo>
+            <calificacion>P.G.16</calificacion>
+        </datos_libro>
+    </fichadePrestamo>
+    <fecha_salida>19-5-2023</fecha_salida>
+    <fecha_devolucion>28-9-2023</fecha_devolucion>
+    <firma_recibido></firma_recibido>
+</biblioteca>

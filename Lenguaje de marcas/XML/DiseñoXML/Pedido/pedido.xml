@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos [
+        <!ELEMENT pedidos (pedido)*>
+        <!ELEMENT pedido (destinatario|articulo|fechaEntrega)*>
+        <!ELEMENT destinatario (nombre|apellido|domicilio)*>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT apellido (#PCDATA)>
+        <!ELEMENT domicilio (#PCDATA)>
+        <!ELEMENT articulo (vehiculo|modelo|cantidad)*>
+        <!ELEMENT vehiculo (#PCDATA)>
+        <!ATTLIST vehiculo
+                tipo CDATA #REQUIRED>
+        <!ELEMENT modelo (#PCDATA)>
+        <!ELEMENT cantidad (#PCDATA)>
+        <!ELEMENT fechaEntrega (#PCDATA)>
+        ]>
 <pedidos>
     <pedido>
         <destinatario>
-            <Nombre></Nombre>
-            <Apellido></Apellido>
-            <Domicilio></Domicilio>
+            <nombre>Juan</nombre>
+            <apellido>Delgado Martínez</apellido>
+            <domicilio>calle Barco 4, tercer piso, letra A</domicilio>
         </destinatario>
         <articulo>
-            <tipo></tipo>
-            <cantidad></cantidad>
+            <vehiculo tipo="bicicleta">bicicleta</vehiculo>
+            <modelo>A2023</modelo>
+            <cantidad>1</cantidad>
         </articulo>
-        <fechaEntrega></fechaEntrega>
+        <fechaEntrega>19-5-2000</fechaEntrega>
     </pedido>
 </pedidos>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Juan Delgado Martínez. El pedido se compone de una bicicleta A2023. A entregar en la calle Barco 4, tercer piso, letra A, el día 19-5-2000.-->
-
-<!--destinatario del pedido, artículo pedido, dirección de entrega, fecha de entrega-->
-
-
-
-

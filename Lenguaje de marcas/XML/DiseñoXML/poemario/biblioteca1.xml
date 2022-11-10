@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE buscadorPoema [
+        <!ELEMENT buscadorPoema (datos_poema|datos_autor|texto_poema)*>
+        <!ELEMENT datos_poema (tituloPoema|estiloPoema|temáticaPoema)*>
+        <!ELEMENT tituloPoema (#PCDATA)>
+        <!ELEMENT estiloPoema (#PCDATA)>
+        <!ELEMENT temáticaPoema (#PCDATA)>
+        <!ELEMENT datos_autor (nombreAutor|añoNacimiento|añoDefuncion)*>
+        <!ELEMENT nombreAutor (#PCDATA)>
+        <!ELEMENT añoNacimiento (#PCDATA)>
+        <!ELEMENT añoDefuncion (#PCDATA)>
+        <!ELEMENT texto_poema (movimientoLiterario|estrofasPoema|lineasPoema)*>
+        <!ELEMENT movimientoLiterario (#PCDATA)>
+        <!ELEMENT estrofasPoema (estrofa)*>
+        <!ELEMENT estrofa (#PCDATA)>
+        <!ATTLIST estrofa
+                numero CDATA #REQUIRED>
+        <!ELEMENT lineasPoema (linea)*>
+        <!ELEMENT linea (#PCDATA)>
+        <!ATTLIST linea
+                numero CDATA #REQUIRED>
+        ]>
+<buscadorPoema>
+    <datos_poema>
+        <tituloPoema>Poema de la guerra</tituloPoema>
+        <estiloPoema>Modernismo</estiloPoema>
+        <temáticaPoema>Guerra</temáticaPoema>
+    </datos_poema>
+    <datos_autor>
+        <nombreAutor>Antonio Machado</nombreAutor>
+        <añoNacimiento>1875</añoNacimiento>
+        <añoDefuncion>1939</añoDefuncion>
+    </datos_autor>
+    <texto_poema>
+        <movimientoLiterario>Generación del 98</movimientoLiterario>
+        <estrofasPoema>
+            <estrofa numero="1">
+                Otra vez en la noche...Es el martillo
+                de la fiebre en las sienes bien venidas
+                del niño. -Madre, ¿el pájaro amarillo!
+                ¡las mariposas negras y moradas!
+                Duerme, hijo mío. - Y la manita oprime
+                La madre, junto al lecho-. ¡Oh flor de fuego!
+                ¿Quién ha de helarte, flor de sangre, dime:
+                Hay en la pobre alcoba olor de espliego;
+            </estrofa>
+        </estrofasPoema>
+        <lineasPoema>
+            <linea numero="1">Otra vez en la noche...Es el martillo</linea>
+            <linea numero="2">de la fiebre en las sienes bien venidas</linea>
+            <linea numero="3">del niño. -Madre, ¿el pájaro amarillo!</linea>
+            <linea numero="4">¡las mariposas negras y moradas!</linea>
+            <linea numero="5">Duerme, hijo mío. - Y la manita oprime</linea>
+            <linea numero="6">La madre, junto al lecho-. ¡Oh flor de fuego!</linea>
+            <linea numero="7">¿Quién ha de helarte, flor de sangre, dime:</linea>
+            <linea numero="8">Hay en la pobre alcoba olor de espliego;</linea>
+        </lineasPoema>
+    </texto_poema>
+</buscadorPoema>
+
+
+
+
+
+
+
+
+
+

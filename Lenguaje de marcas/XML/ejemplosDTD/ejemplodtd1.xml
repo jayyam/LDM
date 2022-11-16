@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE persona [
+        <!ELEMENT persona (amigo)*>
+        <!ELEMENT amigo (nombre|edad)*>
+        <!ATTLIST amigo
+                id CDATA #REQUIRED>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT edad (#PCDATA)>
+        <!ATTLIST edad
+                id CDATA #REQUIRED>
+        ]>
+<persona>
+    <amigo id="1">
+        <nombre>paco</nombre>
+        <edad id="23"></edad>
+    </amigo>
+</persona>

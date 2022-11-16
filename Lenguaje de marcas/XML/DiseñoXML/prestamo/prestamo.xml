@@ -16,7 +16,7 @@
         <!ELEMENT firma_recibido (#PCDATA)>
         ]>
 <biblioteca>
-    <fichadePrestamo>
+    <fichadePrestamo id="1">
         <datos_lector>
                 <nombre>Juan</nombre>
                 <apellido>Delgado Martinez</apellido>
@@ -31,5 +31,6 @@
     </fichadePrestamo>
     <fecha_salida>19-5-2023</fecha_salida>
     <fecha_devolucion>28-9-2023</fecha_devolucion>
-    <firma_recibido></firma_recibido>
+    <firma_recibido>archivodefirma.jpg</firma_recibido>
+
 </biblioteca>

@@ -16,6 +16,7 @@
         <!ELEMENT nota (#PCDATA)>
         ]>
 <licencias>
+    <logo>foto.jpg</logo>
     <Licencia tipo="Pesca maritima de recreo">
         <numero>123456</numero>
         <datos>
@@ -29,4 +30,5 @@
         </datos>
         <nota>La identidad del titular...</nota>
     </Licencia>
+
 </licencias>

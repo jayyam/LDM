@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos grupo="3A">
+    <alumno dni="2222B">
+        <nombre>Juan</nombre>
+        <nota eval ="1">8.5</nota>
+    </alumno>
+    <alumno dni="3333F">
+        <nombre>Pepe</nombre>
+        <nota>7.5</nota>
+    </alumno>
+</alumnos>

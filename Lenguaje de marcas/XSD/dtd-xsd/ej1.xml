@@ -1,0 +1,28 @@
+<?xml encoding="UTF-8"?>
+<!DOCTYPE catalogoLibro [
+        <!ELEMENT catalogoLibro (libro)*>
+        <!ELEMENT libro (titulo, autor+, fecha, ISBN, editor)>
+
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT autor (#PCDATA)>
+        <!ELEMENT fecha (mes?, anyo)>
+
+        <!ELEMENT mes (#PCDATA)>
+        <!ELEMENT anyo (#PCDATA)>
+        <!ELEMENT ISBN (#PCDATA)>
+        <!ELEMENT editor (#PCDATA)>
+        ]>
+
+<catalogoLibro>
+    <libro>
+        <titulo>tractarus</titulo>
+        <autor>wittgenstein</autor>
+        <fecha>
+            <mes>10</mes>,
+            <anyo>1941</anyo>>
+        </fecha>
+        <ISBN>AB-4563</ISBN>
+        <editor>Alfaguara</editor>
+    </libro>
+</catalogoLibro>
+

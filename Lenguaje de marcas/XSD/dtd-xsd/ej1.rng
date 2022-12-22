@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+    <define name="catalogoLibro">
+        <element name="catalogoLibro">
+            <ref name="attlist.catalogoLibro"/>
+            <zeroOrMore>
+                <ref name="libro"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    <define name="attlist.catalogoLibro" combine="interleave">
+        <empty/>
+    </define>
+    <define name="libro">
+        <element name="libro">
+            <ref name="attlist.libro"/>
+            <ref name="titulo"/>
+            <oneOrMore>
+                <ref name="autor"/>
+            </oneOrMore>
+            <ref name="fecha"/>
+            <ref name="ISBN"/>
+            <ref name="editor"/>
+        </element>
+    </define>
+    <define name="attlist.libro" combine="interleave">
+        <empty/>
+    </define>
+    <define name="titulo">
+        <element name="titulo">
+            <ref name="attlist.titulo"/>
+            <text/>
+        </element>
+    </define>
+    <define name="attlist.titulo" combine="interleave">
+        <empty/>
+    </define>
+    <define name="autor">
+        <element name="autor">
+            <ref name="attlist.autor"/>
+            <text/>
+        </element>
+    </define>
+    <define name="attlist.autor" combine="interleave">
+        <empty/>
+    </define>
+    <define name="fecha">
+        <element name="fecha">
+            <ref name="attlist.fecha"/>
+            <optional>
+                <ref name="mes"/>
+            </optional>
+            <ref name="anyo"/>
+        </element>
+    </define>
+    <define name="attlist.fecha" combine="interleave">
+        <empty/>
+    </define>
+    <define name="mes">
+        <element name="mes">
+            <ref name="attlist.mes"/>
+            <text/>
+        </element>
+    </define>
+    <define name="attlist.mes" combine="interleave">
+        <empty/>
+    </define>
+    <define name="anyo">
+        <element name="anyo">
+            <ref name="attlist.anyo"/>
+            <text/>
+        </element>
+    </define>
+    <define name="attlist.anyo" combine="interleave">
+        <empty/>
+    </define>
+    <define name="ISBN">
+        <element name="ISBN">
+            <ref name="attlist.ISBN"/>
+            <text/>
+        </element>
+    </define>
+    <define name="attlist.ISBN" combine="interleave">
+        <empty/>
+    </define>
+    <define name="editor">
+        <element name="editor">
+            <ref name="attlist.editor"/>
+            <text/>
+        </element>
+    </define>
+    <define name="attlist.editor" combine="interleave">
+        <empty/>
+    </define>
+    <start>
+        <choice>
+            <ref name="catalogoLibro"/>
+        </choice>
+    </start>
+</grammar>

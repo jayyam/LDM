@@ -1,0 +1,28 @@
+<?xml encoding="UTF-8"?>
+<!DOCTYPE aeropuerto [
+<!ELEMENT aeropuerto (nombre, vuelos, fecha)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT vuelos (vuelo+)>
+<!ELEMENT diario EMPTY>
+<!ELEMENT vuelo (diario?, origen, destino, hora-salida, hora-llegada)>
+
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT destino (#PCDATA)>
+<!ELEMENT hora-salida (#PCDATA)>
+<!ELEMENT hora-llegada (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+        ]>
+
+<aeropuerto>
+    <nombre>jfk</nombre>
+    <vuelos>
+        <vuelo>
+            <diario></diario>
+            <origen>nueva york</origen>
+            <destino>madrid</destino>
+            <hora-salida>19:30</hora-salida>
+            <hora-llegada>06:50</hora-llegada>
+        </vuelo>
+    </vuelos>
+    <fecha>25/12/2005</fecha>
+</aeropuerto>

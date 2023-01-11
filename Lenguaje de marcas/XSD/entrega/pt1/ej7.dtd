@@ -1,0 +1,9 @@
+<?xml encoding="UTF-8"?>
+<!DOCTYPE catalogoLibro [
+<!ELEMENT localidades (provincia*)>
+        <!ELEMENT provincia (#PCDATA | ciudad | codigo_postal|fistro)*>
+        <!ELEMENT ciudad (#PCDATA)>
+        <!ELEMENT codigo_postal (#PCDATA)>
+
+        <!ELEMENT fistro EMPTY>
+]>

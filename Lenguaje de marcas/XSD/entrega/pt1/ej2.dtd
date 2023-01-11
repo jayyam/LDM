@@ -1,0 +1,14 @@
+﻿<?xml encoding="UTF-8"?>
+<!DOCTYPE catalogoLibro [
+<!ELEMENT aeropuerto (nombre, vuelos, fecha)>
+   <!ELEMENT nombre (#PCDATA)>
+   <!ELEMENT vuelos (vuelo+)>
+   <!ELEMENT diario >
+   <!ELEMENT vuelo (diario?, origen, destino, hora-salida, hora-llegada)>
+
+   <!ELEMENT origen (#PCDATA)>
+   <!ELEMENT destino (#PCDATA)>
+   <!ELEMENT hora-salida (#PCDATA)>
+   <!ELEMENT hora-llegada (#PCDATA)>
+   <!ELEMENT fecha (#PCDATA)>
+        ]>

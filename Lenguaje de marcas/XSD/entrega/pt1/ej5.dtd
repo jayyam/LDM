@@ -1,0 +1,8 @@
+<?xml encoding="UTF-8"?>
+<!DOCTYPE catalogoLibro [
+<!ELEMENT articulos (articulo)*>
+        <!ELEMENT articulo ((codigo | id), nombre)>
+        <!ELEMENT codigo (#PCDATA)>
+        <!ELEMENT id (#PCDATA)>
+        <!ELEMENT nombre (#PCDATA)>
+]>

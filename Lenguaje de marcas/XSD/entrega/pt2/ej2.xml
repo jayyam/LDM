@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<precios>
+    <precio>8</precio>
+    <precio>2.6</precio>
+    <precio>4.95</precio>
+    <precio>187</precio>
+</precios>
+
+<!--Escribir el contenido del archivo "precios.xsd" que permita validarlo, teniendo en cuenta que el elemento "precio"
+puede tomar por valor un número que contenga tres dígitos como máximo y, de ellos, solamente dos pueden ser decimales.-->

@@ -1,6 +1,4 @@
-﻿<?xml encoding="UTF-8"?>
-<!DOCTYPE aeropuertos [
-<!ELEMENT aeropuerto (nombre, vuelos, fecha)>
+﻿<!ELEMENT aeropuerto (nombre, vuelos, fecha)>
    <!ELEMENT nombre (#PCDATA)>
    <!ELEMENT vuelos (vuelo+)>
    <!ELEMENT vuelo (diario?, origen, destino, hora-salida, hora-llegada)>
@@ -10,4 +8,3 @@
    <!ELEMENT hora-salida (#PCDATA)>
    <!ELEMENT hora-llegada (#PCDATA)>
    <!ELEMENT fecha (#PCDATA)>
-        ]>

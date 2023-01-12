@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="localidades">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="localidad"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="localidad">
+        <xs:complexType>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:element ref="pais"/>
+                    <xs:element ref="ciudad"/>
+                </xs:sequence>
+                <xs:element ref="codigo_postal"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="pais" type="xs:string"/>
+    <xs:element name="ciudad" type="xs:string"/>
+    <xs:element name="codigo_postal" type="xs:string"/>
+</xs:schema>

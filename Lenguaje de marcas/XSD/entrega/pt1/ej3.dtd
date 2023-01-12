@@ -1,6 +1,3 @@
-﻿<?xml encoding="UTF-8"?>
-<!DOCTYPE articulos [
-   <!ELEMENT articulo (codigo | id)>
+﻿    <!ELEMENT articulo (codigo | id)>
    <!ELEMENT codigo (#PCDATA)>
    <!ELEMENT id (#PCDATA)>
-]>

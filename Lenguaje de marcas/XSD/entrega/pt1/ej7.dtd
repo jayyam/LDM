@@ -1,8 +1,6 @@
-<?xml encoding="UTF-8"?>
-<!DOCTYPE localidades [
+
 <!ELEMENT localidades (provincia*)>
         <!ELEMENT provincia (ciudad | codigo_postal | fistro)*>
         <!ELEMENT ciudad (#PCDATA)>
         <!ELEMENT codigo_postal (#PCDATA)>
         <!ELEMENT fistro EMPTY>
-]>

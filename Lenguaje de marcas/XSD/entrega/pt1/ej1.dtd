@@ -1,5 +1,3 @@
-<?xml encoding="UTF-8"?>
-<!DOCTYPE catalogoLibro [
 <!ELEMENT catalogoLibro (libro)*>
         <!ELEMENT libro (titulo,autor+,fecha,ISBN,editor)>
         <!ELEMENT titulo (#PCDATA)>
@@ -9,4 +7,4 @@
         <!ELEMENT anyo (#PCDATA)>
         <!ELEMENT ISBN (#PCDATA)>
         <!ELEMENT editor (#PCDATA)>
-        ]>
+

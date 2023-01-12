@@ -1,0 +1,21 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="cantidad" type="tipoCantidad"/>
+    <xsd:annotation>
+        <xsd:documentation>
+            A continuación creamos el tipo cantidad
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType name="tipoCantidad">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:float">
+                <xsd:attribute name="divisa" type="tipoDivisa"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:simpleType name="tipoDivisa">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="euros"/>
+            <xsd:enumeration value="dolares"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

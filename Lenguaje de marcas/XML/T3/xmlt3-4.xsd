@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="documentos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="documento"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="documento">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="contenido"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="contenido">
+        <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="autor"/>
+                <xs:element ref="fecha"/>
+                <xs:element ref="punto"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="autor">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="fecha">
+        <xs:complexType>
+            <xs:attribute name="id" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="punto">
+        <xs:complexType mixed="true">
+            <xs:attribute name="id" use="required" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

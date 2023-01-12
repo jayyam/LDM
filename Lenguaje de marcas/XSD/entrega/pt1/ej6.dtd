@@ -1,5 +1,5 @@
 <?xml encoding="UTF-8"?>
-<!DOCTYPE catalogoLibro [
+<!DOCTYPE localidades [
 <!ELEMENT localidades (localidad)*>
         <!ELEMENT localidad ((pais, ciudad) | codigo_postal)>
         <!ELEMENT pais (#PCDATA)>

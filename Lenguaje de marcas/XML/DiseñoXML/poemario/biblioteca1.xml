@@ -30,7 +30,7 @@
         <nombreAutor>Antonio Machado</nombreAutor>
         <añoNacimiento>1875</añoNacimiento>
         <añoDefuncion>1939</añoDefuncion>
-    </datos_autor>
+    </datos_autor>*.local
     <texto_poema>
         <movimientoLiterario>Generación del 98</movimientoLiterario>
         <estrofasPoema>

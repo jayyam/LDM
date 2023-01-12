@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <titulo>diccionario para corrector ortográfico</titulo>
+
+<!DOCTYPE titulo [
+        <!ELEMENT titulo (palabras|signo|autor)*>
+        <!ELEMENT palabras (palabra)*>
+        <!ELEMENT palabra (#PCDATA)>
+        <!ELEMENT signo (#PCDATA)>
+        <!ELEMENT autor (#PCDATA)>
+        ]>
+      <titulo>diccionario para corrector ortográfico
             <palabras>
-            <palabra> correcta idioma=español hincapié</palabra>
-<palabra#incorrecta idioma=español>incapié
-</palabras>
-<signo="?" />interrogación
-<autor>Barto</ autor>
+                  <palabra> correcta idioma=español hincapié</palabra>
+                  <palabra> incorrecta idioma=español incapié</palabra>
+            </palabras>
+            <signo> ="?" interrogación</signo>
+            <autor>Barto</autor>
+      </titulo>

@@ -1,6 +1,15 @@
+<!DOCTYPE persona [
+        <!ELEMENT persona (nombre|correo|telefono_fijo)*>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ATTLIST nombre
+                id CDATA #REQUIRED>
+        <!ELEMENT correo (#PCDATA)>
+        <!ELEMENT telefono_fijo (#PCDATA)>
+        ]>
 <persona>
-    <nombre="Pepito Conejo">
-    pepito.conejo@example.org
-    <persona>
-        <nombre>Juanita Banana</nombre>
-        <telefono fijo>3141593</telefono fijo>
+    <nombre id="Pepito Conejo"></nombre>
+    <correo>pepito.conejo@example.org</correo>
+
+    <nombre id="Juanita Banana"></nombre>
+    <telefono_fijo>3141593</telefono_fijo>
+</persona>

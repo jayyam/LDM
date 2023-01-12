@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE examen [
+        <!ELEMENT examen (pregunta|respuesta)*>
+        <!ELEMENT pregunta (#PCDATA)>
+        <!ELEMENT respuesta (#PCDATA)>
+        ]>
 <examen>
-    <pregunta 1>
-    XML significa ...
-</pregunta>
-<respuesta correcta>
-... eXtensible Markup Language
-</respuesta>
+        <pregunta>  1:
+            XML significa ...
+        </pregunta>
+        <respuesta> correcta>
+            ... eXtensible Markup Language
+        </respuesta>
+</examen>

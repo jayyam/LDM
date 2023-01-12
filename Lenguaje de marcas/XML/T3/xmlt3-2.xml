@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE diccionarios [
+        <!ELEMENT diccionarios (idiomas|palabras|autor)*>
+        <!ELEMENT idiomas (idioma)*>
+        <!ELEMENT idioma (#PCDATA)>
+        <!ATTLIST idioma
+                id CDATA #REQUIRED>
+        <!ELEMENT palabras (palabra)*>
+        <!ELEMENT palabra (#PCDATA)>
+        <!ATTLIST palabra
+                id CDATA #REQUIRED>
+        <!ELEMENT autor (#PCDATA)>
+        ]>
 <diccionarios>
     <idiomas>
         <idioma id="es">español</idioma>
@@ -6,10 +18,9 @@
         <idioma id="en">inglés</idioma>
     </idiomas>
     <palabras>
-        <palabra id="es"> perro />perro
-        <palabra id="en"> perro />dog
-        <palabra id="fr"> perro />chien
-    <\palabras>
-        autor: Acme & Co.
-
-    </diccionarios>
+        <palabra id="es"> perro </palabra>
+        <palabra id="en"> perro </palabra>
+        <palabra id="fr"> perro </palabra>
+    </palabras>
+        <autor>Acme &amp; Co.</autor>
+</diccionarios>

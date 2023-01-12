@@ -1,5 +1,5 @@
 ﻿<?xml encoding="UTF-8"?>
-<!DOCTYPE catalogoLibro [
+<!DOCTYPE articulos [
 <!ELEMENT articulos (codigo | id)*>
    <!ELEMENT codigo (#PCDATA)>
    <!ELEMENT id (#PCDATA)>

@@ -1,0 +1,11 @@
+<localidades>
+  <!--Zero or more repetitions:-->
+  <provincia>
+    e
+    <!--You have a CHOICE of the next 3 items at this level-->
+    <ciudad>string</ciudad>
+    <codigo_postal>string</codigo_postal>
+    <fistro/>
+    gero
+  </provincia>
+</localidades>

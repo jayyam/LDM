@@ -8,7 +8,7 @@
         </xs:complexType>
     </xs:element>
     <xs:element name="provincia">
-        <xs:complexType>
+        <xs:complexType mixed="true">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="ciudad"/>
                 <xs:element ref="codigo_postal"/>

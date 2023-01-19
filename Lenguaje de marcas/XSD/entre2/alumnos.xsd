@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="alumnos" type="alumnosType"/>
+  <xs:complexType name="direccionType">
+    <xs:sequence>
+      <xs:element name="calle">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Avenida de la Fuente"/>
+            <xs:enumeration value="Calle Ancha"/>
+            <xs:enumeration value="Calle Mayor"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="numero">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="33"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="ciudad"/>
+      <xs:element type="xs:string" name="provincia"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumnoType">
+    <xs:sequence>
+      <xs:element name="nombre">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Juan Andrés"/>
+            <xs:enumeration value="Jose Sanchez"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="direccionType" name="direccion" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element name="telefono">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="924555555"/>
+            <xs:enumeration value="924550000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="dni" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="alumnosType">
+    <xs:sequence>
+      <xs:element type="alumnoType" name="alumno" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

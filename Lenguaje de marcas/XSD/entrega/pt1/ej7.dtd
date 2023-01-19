@@ -1,6 +1,6 @@
-
 <!ELEMENT localidades (provincia*)>
-        <!ELEMENT provincia (ciudad | codigo_postal | fistro)*>
+        <!ELEMENT provincia (#PCDATA | ciudad | codigo_postal | fistro)*>
         <!ELEMENT ciudad (#PCDATA)>
         <!ELEMENT codigo_postal (#PCDATA)>
+
         <!ELEMENT fistro EMPTY>
